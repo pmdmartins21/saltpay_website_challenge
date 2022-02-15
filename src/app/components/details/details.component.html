@@ -1,0 +1,65 @@
+<div class="container">
+	<div class="row">
+		<div class="frame">
+			<div class="center">
+				<div class="profile">
+					<div class="image">
+						<div class="circle-1"></div>
+						<div class="circle-2"></div>
+						<img src="{{ album.imageUrl }}" width="70" height="70" alt="{{ album.albumName }}">
+					</div>			
+					<div class="artist-name">{{ album.artistName }}</div>
+					<div class="album-name">{{ album.albumName }}</div>				
+					<div class="actions">
+						<a class="btn" href="{{ album.itunesLink }}" target="_blank">Listen on iTunes</a>
+						<button *ngIf="!isFavorite" class="btn" (click)="toggleFavourites()">Add to Favourites</button>
+						<button *ngIf="isFavorite" class="btn" (click)="toggleFavourites()">Remove Favorite</button>				  					  
+					</div>
+					<button class="btn favorite" *ngIf="isFavorite"><fa-icon [icon]="faStar" class="star"></fa-icon>Favorite</button>			
+				</div>		  
+				<div class="stats mt3">
+					<div class="box">
+						<span class="value">Price</span>
+						<span class="parameter">{{ album.price }}</span>
+					</div>
+					<div class="box">
+						<span class="value">Genre</span>
+						<span class="parameter">{{ album.genre }}</span>
+					</div>
+					<div class="box">
+						<span class="value">Songs</span>
+						<span class="parameter">{{ album.trackNumber }}</span>
+					</div>
+				</div>
+			</div>  
+		</div>
+	</div>
+	
+	<div class="row mt2">
+		<div class="youtube-disclaimer mt3 mb3">
+			<div>
+				<h2>Check the Top 3 Youtube Videos from this artist</h2>
+			</div>
+			<div>
+				<h2>
+					<fa-icon class="mr-2" [icon]="faArrowAltCircleDown"></fa-icon>
+					<fa-icon class="mr-2" [icon]="faArrowAltCircleDown"></fa-icon>
+					<fa-icon [icon]="faArrowAltCircleDown"></fa-icon>
+				</h2>
+			</div>
+		</div>
+		<div class="row">
+			<youtube-player *ngFor="let video of youtubeVideos.items"
+				videoId="{{video.id.videoId}}" 
+				suggestedQuality="highres" 
+				[height]="250" 
+				[width]="350" 
+				[startSeconds]="4"
+				[endSeconds]="8">
+		  </youtube-player>
+		</div>
+	</div>	 
+</div>
+
+
+

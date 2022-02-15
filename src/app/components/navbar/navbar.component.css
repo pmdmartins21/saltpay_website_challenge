@@ -1,0 +1,26 @@
+.navbar {
+    background: transparent;
+    margin-bottom: 30px;
+
+}
+a {
+    height: auto;
+    border-radius: 5px;
+    font-family: tahoma;
+    font-size: larger;
+
+}
+
+._link {
+    color: #f0e1c8;
+    font-weight: 800;
+    
+}
+
+.navbar-toggler {
+    background-color: #f0e1c8;
+}
+
+ul{
+    padding-inline-start: 0px;
+}

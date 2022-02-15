@@ -1,0 +1,135 @@
+body {
+    font-family: tahoma;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+  }
+
+  a{
+    color: #ca7c4e;
+  }
+  
+  .album {
+    padding: 30px 0 40px;
+    margin-bottom: 30px;
+    background-color: #f7f5ec;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+  }
+  
+  .album .picture {
+    display: inline-block;
+    height: 130px;
+    width: 130px;
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .album .name {
+    font-weight: 500;
+  }
+  
+  .album .picture::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background: #ca7c4e;
+    background: -webkit-linear-gradient(bottom left, #eebe6c 0%, #ca7c4e 100%);
+    background: -moz-linear-gradient(bottom left, #eebe6c 0%, #ca7c4e 100%);
+    background: -o-linear-gradient(bottom left, #eebe6c 0%, #ca7c4e 100%);
+    background: linear-gradient(to top right, #eebe6c 0%, #ca7c4e 100%);
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+  }
+  
+  .album:hover .picture::before {
+    height: 100%;
+  }
+  
+  .album .picture::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #ca7c4e;
+    background: -webkit-linear-gradient(bottom left, #eebe6c 0%, #ca7c4e 100%);
+    background: -moz-linear-gradient(bottom left, #eebe6c 0%, #ca7c4e 100%);
+    background: -o-linear-gradient(bottom left, #eebe6c 0%, #ca7c4e 100%);
+    background: linear-gradient(to top right, #eebe6c 0%, #ca7c4e 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .album .picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+  }
+  
+  .album:hover .picture img {
+    box-shadow: 0 0 0 14px #f7f5ec;
+    transform: scale(0.7);
+  }
+  
+  .album .title {
+    display: block;
+    font-size: 15px;
+    color: rgb(194, 136, 97);
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+  
+  .album .detail-link {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #ca7c4e;
+    background: -webkit-linear-gradient(bottom left, #eebe6c 0%, #ca7c4e 100%);
+    background: -moz-linear-gradient(bottom left, #eebe6c 0%, #ca7c4e 100%);
+    background: -o-linear-gradient(bottom left, #eebe6c 0%, #ca7c4e 100%);
+    background: linear-gradient(to top right, #eebe6c 0%, #ca7c4e 100%);
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+    color: white;
+  }
+  
+  .album:hover .detail-link {
+    bottom: 0;
+  }
+  
+  .album .detail-link li {
+    display: inline-block;
+  }
+  
+  .album .detail-link li a {
+    display: block;
+    padding: 10px;
+    font-size: 17px;
+    color: white;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+  }
+  
+  .album .detail-link li a:hover {
+    color: blue;
+    background-color: #f7f5ec;
+  }
+  
+  

@@ -1,0 +1,11 @@
+._bg-color{
+    background: #ca7c4e;
+    background: -webkit-linear-gradient(bottom left, #eebe6c 0%, #ca7c4e 100%);
+    background: -moz-linear-gradient(bottom left, #eebe6c 0%, #ca7c4e 100%);
+    background: -o-linear-gradient(bottom left, #eebe6c 0%, #ca7c4e 100%);
+    background: linear-gradient(to top right, #eebe6c 0%, #ca7c4e 100%);
+}
+
+._color {
+    color: #ca7c4e
+}

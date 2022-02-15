@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row mb-3">
+    <div class="searchBar m-auto">
+      <input type="text" name="search" placeholder="Search By Artist" [(ngModel)]="searchText">
+    </div>
+  </div>
+  <div class="row">
+    <h1 class="m-auto">OR</h1>
+  </div>
+  <div class="row mt3 mb2">
+    <h4 class="m-auto filter">Filter By Categories:</h4>
+  </div>
+  <div class="row categories_search">
+    <div class="btn btn-outline-secondary m-1" *ngFor="let category of categoryList" [ngClass]="{ 'bg-white':!isCategoryFiltered(category) , 'categories':isCategoryFiltered(category) }" (click)="filterCategory(category)">
+      {{ category }}
+    </div>
+  </div>
+    <div>
+      <app-top100list 
+      [filteredCategoryList]="filteredCategoryList"
+      [albumList]="albumList" 
+      [searchText]="searchText"
+      >
+      </app-top100list>   
+    </div>
+</div>
+
